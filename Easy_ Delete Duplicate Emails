@@ -1,0 +1,1 @@
+Delete from Person where Id not in (Select * from (Select min(Id) from Person group by Email) as minrec);
