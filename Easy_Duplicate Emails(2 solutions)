@@ -1,0 +1,5 @@
+Select Email from (Select Email, count(Email) as Freq from Person group by Email) as res where Freq >1;
+
+OR
+
+Select Email from Person group by Email having count(Email)>1;
